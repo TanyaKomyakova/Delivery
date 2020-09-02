@@ -40,8 +40,8 @@ public class DeliveryTest {
         form.$("[data-test-id=city] input").setValue("Пенза");
         form.$(".calendar-input input").doubleClick().sendKeys(Keys.BACK_SPACE);
         form.$(".calendar-input input").setValue(generateDate(8));
-        form.$("[data-test-id=name] input").setValue("Коттейко Татьяна");
-        form.$("[data-test-id=phone] input").setValue("+79636665578");
+        form.$("[data-test-id=name] input").setValue("Котейконька Татьяна");
+        form.$("[data-test-id=phone] input").setValue("+79636662222");
         form.$("[data-test-id=agreement]").click();
         form.$(".button__text").click();
         $("[data-test-id=success-notification]").waitUntil(visible, 15000).shouldHave(exactText("Успешно! Встреча успешно запланирована на 10.09.2020"));
@@ -54,13 +54,13 @@ public class DeliveryTest {
         SelenideElement form = $("form");
         form.$("[data-test-id=city] input").setValue("Пенза");
         form.$(".calendar-input input").doubleClick().sendKeys(Keys.BACK_SPACE);
-        form.$(".calendar-input input").setValue("11.09.2020");
-        form.$("[data-test-id=name] input").setValue("Котейко Татьяна");
-        form.$("[data-test-id=phone] input").setValue("+79636665522");
+        form.$(".calendar-input input").setValue(generateDate(9));
+        form.$("[data-test-id=name] input").setValue("Котейконька Татьяна");
+        form.$("[data-test-id=phone] input").setValue("+79636662222");
         form.$("[data-test-id=agreement]").click();
         form.$(".button__text").click();
         form.$("button").waitUntil(visible, 15000).click();
-        $("[data-test-id=success-notification]").waitUntil(visible, 15000).shouldHave(exactText("Успешно!Встреча успешно запланирована на 15.09.2020"));
+        $("[data-test-id=success-notification]").waitUntil(visible, 15000).shouldHave(exactText("Успешно!Встреча успешно запланирована на 11.09.2020"));
 
 
     }
