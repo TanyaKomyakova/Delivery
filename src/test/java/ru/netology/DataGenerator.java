@@ -16,7 +16,6 @@ public class DataGenerator {
         private Registration() {
         }
 
-        @org.jetbrains.annotations.Contract(" -> new")
         public static Client generateClient() {
             return new Client(generateCity(), generateDate(3), generateName(), generatePhone());
         }
