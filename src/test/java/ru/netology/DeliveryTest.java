@@ -17,6 +17,7 @@ import static ru.netology.DataGenerator.Registration.generateClient;
 import static ru.netology.DataGenerator.Registration.generateDate;
 
 public class DeliveryTest {
+
     @Test
     void checkingCardBooking() {
         Client client = generateClient();
